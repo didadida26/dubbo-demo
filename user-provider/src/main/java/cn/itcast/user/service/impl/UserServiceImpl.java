@@ -17,4 +17,11 @@ public class UserServiceImpl implements UserService {
     public User queryById(Long id) {
         return userMapper.findById(id);
     }
+
+    @Override
+    public String queryUserName(Long id) {
+        return userMapper.findById(id).getUsername();
+    }
+
+
 }
